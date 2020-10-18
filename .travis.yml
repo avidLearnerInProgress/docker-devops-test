@@ -7,4 +7,4 @@ before_install :
     - docker build -t chirag96/docker-devops-test -f Dockerfile.dev .
 
 script :
-    - docker run chirag96/docker-devops-test npm run test -- --coverage
+    - docker run -e CI=true chirag96/docker-devops-test npm run test -- --coverage
